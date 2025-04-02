@@ -1,3 +1,4 @@
+# Files with extensions below will be ignored
 *
 *.a
 *.bin
