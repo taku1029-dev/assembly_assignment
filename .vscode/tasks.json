@@ -26,7 +26,7 @@
             "command": "bash",
             "args": [
                 "-c",
-                "nasm -w-all -f elf32 -F dwarf -o ${fileBasenameNoExtension}.o ${file} && ld -m elf_i386 -o ${fileBasenameNoExtension} ${fileBasenameNoExtension}.o"
+                "nasm -w-all -f elf32 -F dwarf -o ${fileBasenameNoExtension}.o ${file} && ld -m elf_i386 -o ${fileBasenameNoExtension} ${fileBasenameNoExtension}.o && ./${fileBasenameNoExtension}"
             ],
             "group": {
                 "kind": "build",
