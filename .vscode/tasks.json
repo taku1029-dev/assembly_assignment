@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Debug NASM",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "nasm -f elf32 -g -F dwarf -o ${fileBasenameNoExtension}.o ${file} && ld -m elf_i386 -o ${fileBasenameNoExtension} ${fileBasenameNoExtension}.o && gdb -quiet ./${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build No Debug NASM",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "nasm -w-all -f elf32 -F dwarf -o ${fileBasenameNoExtension}.o ${file} && ld -m elf_i386 -o ${fileBasenameNoExtension} ${fileBasenameNoExtension}.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
+        },
+    ]
+}
