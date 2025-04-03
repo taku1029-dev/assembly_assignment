@@ -1,6 +1,6 @@
 # assembly_assignment
 
-Coded in 32=bits NASM on Linux
+Coded in 32-bits NASM on Linux
 
 How to build & run
 
