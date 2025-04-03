@@ -1,5 +1,7 @@
 # assembly_assignment
 
+Coded in 32=bits NASM on Linux
+
 How to build & run
 
 1. With GDB debugger
